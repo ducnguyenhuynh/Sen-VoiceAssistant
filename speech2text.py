@@ -165,6 +165,7 @@ if __name__ == "__main__":
         print("==============================")
         print(f)
         sig = load_audio(test_wav_dir +f)
+        print(sig)
         greedy_hypotheses, beam_hypotheses = neural_factory.infer_signal(sig)#[0]#.cpu().numpy()[0]
         print('predicted:', greedy_hypotheses)
         # print('predicted:', beam_hypotheses)
