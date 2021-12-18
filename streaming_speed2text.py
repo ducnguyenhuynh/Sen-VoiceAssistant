@@ -11,19 +11,10 @@ from speech2text import *
 from threading import Thread
 # sample rate, Hz
 SAMPLE_RATE = 16000
-FRAME_LEN = 4.0
+FRAME_LEN = 3.5
 # number of audio channels (expect mono signal)
 CHANNELS = 1
-
 CHUNK_SIZE = int(FRAME_LEN*SAMPLE_RATE)
-# asr = FrameASR(model_definition = {
-#                    'sample_rate': SAMPLE_RATE,
-#                    'AudioToMelSpectrogramPreprocessor': cfg.preprocessor,
-#                    'JasperEncoder': cfg.encoder,
-#                    'labels': cfg.decoder.vocabulary
-#                },
-#                frame_len=FRAME_LEN, frame_overlap=2, 
-#                offset=4)
 
 
 config = 'config/quartznet12x1_abcfjwz.yaml'
