@@ -7,7 +7,7 @@ import torch
 from queue import Queue
 from ruamel.yaml import YAML
 from speech2text import *
-
+from SenBot.main import Assistant
 from threading import Thread
 # sample rate, Hz
 SAMPLE_RATE = 16000
@@ -61,7 +61,7 @@ if __name__ == "__main__":
                         channels=CHANNELS,
                         rate=SAMPLE_RATE,
                         input=True,
-                        input_device_index=dev_idx,
+                        input_device_index=-2,
                         stream_callback=callback,
                         frames_per_buffer=CHUNK_SIZE)
 
